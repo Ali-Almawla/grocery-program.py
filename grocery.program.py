@@ -28,7 +28,7 @@ while True:
             shopping_cart[item] = quantity
     else:
         print("Sorry, we don’t have that item.")
-        
+
 total_cost = 0
 for item, quantity in shopping_cart.items():
     price = groceries[item]
@@ -37,3 +37,11 @@ for item, quantity in shopping_cart.items():
         price -= 1
 
     total_cost += price * quantity
+
+print(f"\nYou bought: {shopping_cart}")
+print(f"Total = ${total_cost}")
+
+if total_cost > 10:
+    print("You spent a lot!")
+else:
+    print("You spent a little!")
