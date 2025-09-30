@@ -28,3 +28,12 @@ while True:
             shopping_cart[item] = quantity
     else:
         print("Sorry, we don’t have that item.")
+        
+total_cost = 0
+for item, quantity in shopping_cart.items():
+    price = groceries[item]
+
+    if item == "milk" and quantity > 2:
+        price -= 1
+
+    total_cost += price * quantity
